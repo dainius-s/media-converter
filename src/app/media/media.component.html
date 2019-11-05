@@ -1,0 +1,15 @@
+<mat-card *ngIf="media">
+    <mat-card-content>
+      <h2 class="media-title">{{media.title}}</h2>  
+      <small>{{media.durration}}</small>
+      <section class="example-section">
+        <mat-progress-bar
+            [color]="color"
+            [mode]="mode"
+            [value]="media.progress"
+            [bufferValue]="bufferValue">
+        </mat-progress-bar>
+        <small>Complete {{media.progress}}%</small>
+      </section>
+    </mat-card-content>
+  </mat-card>

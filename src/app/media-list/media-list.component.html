@@ -1,0 +1,7 @@
+
+<div class='sidenav'>
+	<div *ngFor='let media of mediaFiles | async | keyvalue'>
+	<app-media [media]="media.value"></app-media>
+	<br>
+	</div>
+</div>

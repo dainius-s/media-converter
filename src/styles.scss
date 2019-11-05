@@ -1,1 +1,70 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; font-weight: normal!important}
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+#home-wave {
+    position: absolute;
+    top:0;
+    z-index: -1;
+}
+h1, h2 {
+    font-weight: normal!important
+}
+
+.featured-icon {
+    font-size: 9rem!important;
+}
+
+.container {
+    text-align: center;
+    padding: 2.5rem;
+}
+
+.home-banner {
+    padding: 5rem 0 3rem;
+    background: #6E7DAB;
+    position: relative;
+    color: rgba(0,0,0,.54);
+
+
+    &:after {
+        // content: "";
+        // background: #663ab7;
+        // padding: 6rem;
+        // position: absolute;
+        // display: block;
+        // left: -5%;
+        // bottom: -5rem;
+        // transform: rotate(5deg);
+        // width: 110%;
+
+        position:absolute;
+        content: " ";
+        display:block;
+        left:0;
+        bottom: -10rem;
+        /* width: 100%; */
+        border-style: solid;
+        border-width: 0 100vw 10rem 0;
+        border-color: transparent #6E7DAB transparent transparent;
+    }
+}
+
+.media-conversion {
+    color: rgba(0,0,0,.54);
+    font-size: 2rem;
+        .mat-form-field {
+            width: 30rem;
+        }
+
+    .input-group-append {
+        display: inline-flex;
+        padding: 0 0.5rem
+    }
+
+    .btn-lg {
+        padding: 0.5rem 2rem;
+        font-size: 1.25rem;
+    }
+}
