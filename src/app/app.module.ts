@@ -1,3 +1,4 @@
+import { TimeLeftComponent } from './media/time-left/time-left.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -53,6 +54,7 @@ import { MediaComponent } from './media/media.component';
 import { MediaListComponent } from './media-list/media-list.component';
 
 import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
+import { MediaService } from './services/media.service';
 
 const config: SocketIoConfig = { url: 'http://localhost:4001', options: {} };
 
@@ -60,6 +62,7 @@ const config: SocketIoConfig = { url: 'http://localhost:4001', options: {} };
    declarations: [
       MediaComponent,
       MediaListComponent,
+      TimeLeftComponent,
       AppComponent
    ],
    imports: [
@@ -167,7 +170,9 @@ const config: SocketIoConfig = { url: 'http://localhost:4001', options: {} };
       PortalModule,
       ScrollingModule
    ],
-   providers: [],
+   providers: [
+      MediaService
+   ],
    bootstrap: [
       AppComponent
    ]

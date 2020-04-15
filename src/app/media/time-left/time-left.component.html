@@ -1,0 +1,7 @@
+<span class="time-left" *ngIf="timer.total">
+  <i class="material-icons">timer</i> 
+  <span class="days" *ngIf="timer.days">{{timer.days}}d </span>
+  <span class="hours" *ngIf="timer.hours || timer.days">{{timer.hours}}h </span>
+  <span class="minutes" *ngIf="timer.minutes || timer.hours || timer.days">{{timer.minutes}}m </span>
+  <span class="seconds" *ngIf="timer.seconds || timer.minutes || timer.hours || timer.days">{{timer.seconds}}s</span>
+</span>

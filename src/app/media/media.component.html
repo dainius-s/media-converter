@@ -9,7 +9,7 @@
             [value]="media.progress"
             [bufferValue]="bufferValue">
         </mat-progress-bar>
-        <small>Complete {{media.progress}}%</small>
+        <small>Complete {{media.progress}}%</small><app-time-left [timeLeft]="endTime"></app-time-left>
       </section>
     </mat-card-content>
   </mat-card>

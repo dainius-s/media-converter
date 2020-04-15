@@ -10,22 +10,21 @@ import { IMedia } from '../media.interface';
 })
 export class MediaListComponent implements OnInit, OnDestroy {
   mediaFiles: Observable<IMedia[]>;
-  currentDoc: string;
-  private _docSub: Subscription;
+
 
   constructor(private mediaService: MediaService) { }
 
   ngOnInit() {
-    this.mediaFiles = this.mediaService.mediaFiles;
-    this._docSub = this.mediaService.currentMedia.subscribe(doc => this.currentDoc = doc.id);
+    //this.mediaFiles = this.mediaService.mediaFiles;
+    this.mediaFiles = this.mediaService.getMediaFiles();
   }
 
   ngOnDestroy() {
-    this._docSub.unsubscribe();
+    //this._docSub.unsubscribe();
   }
 
   loadDoc(id: string) {
-    this.mediaService.getMedia(id);
+    //this.mediaService.getMedia(id);
   }
 
   newDoc() {

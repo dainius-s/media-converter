@@ -1,7 +1,8 @@
 export interface IMedia {
-    title: string;
-    fileName: string;
     id: string;
-    url: string;
-    progress: number;
+    title?: string;
+    fileName?: string;
+    url?: string;
+    progress?: number;
+    startTime?: number;
 }
